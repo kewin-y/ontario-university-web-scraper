@@ -52,10 +52,12 @@ def get_program_summary(program_link):
 
 
 if __name__ == "__main__":
-    program_links = []
+    pl = []
 
     for url in urls:
-        program_links += get_program_links(url)
+        pl += get_program_links(url)
+    
+    program_links = ["https://www.ontariouniversitiesinfo.ca" + end_url for end_url in pl]
 
     # Get the program details of one program using its link
     programs = []

@@ -1,1 +1,134 @@
-[]
+[
+  {
+    "University": "University of Waterloo",
+    "Degree": "Bachelor of Applied Science, BASc",
+    "OUAC Program Code": "WEA",
+    "Grade Range": "Mid- to High 80s",
+    "Experiential Learning": "Co-op program",
+    "Enrollment": "90",
+    "Instruction Language": "English",
+    "Link": "https://www.ontariouniversitiesinfo.ca/programs/7313"
+  },
+  {
+    "University": "Toronto Metropolitan University (formerly Ryerson University)",
+    "Degree": "Bachelor of Architectural Science, BArchSc",
+    "OUAC Program Code": "SAD",
+    "Grade Range": "Mid 80s",
+    "Experiential Learning": "Co-op available by application after first year of studies",
+    "Enrollment": "120",
+    "Instruction Language": "English",
+    "Link": "https://www.ontariouniversitiesinfo.ca/programs/718"
+  },
+  {
+    "University": "Laurentian University",
+    "Degree": "Bachelor of Architectural Studies, BAS",
+    "OUAC Program Code": "LDA",
+    "Grade Range": "75%",
+    "Experiential Learning": "Co-op program",
+    "Enrollment": "Limited enrollment; 7 seats reserved for Indigenous students.",
+    "Instruction Language": "English",
+    "Notes": "Design Studio, electives and work-term experience offered in French.",
+    "Link": "https://www.ontariouniversitiesinfo.ca/programs/5255"
+  },
+  {
+    "University": "University of Toronto",
+    "Degree": "Bachelor of Arts, BA",
+    "OUAC Program Code": "TLA",
+    "Grade Range": "High 80s and above",
+    "Experiential Learning": "Not Available",
+    "Instruction Language": "English",
+    "Link": "https://www.ontariouniversitiesinfo.ca/programs/4476"
+  },
+  {
+    "University": "Carleton University",
+    "Degree": "Bachelor of Architectural Studies, BAS",
+    "OUAC Program Code": "CR",
+    "Grade Range": "75-77% (regular and co-op)",
+    "Experiential Learning": "Co-op option available with this program",
+    "Enrollment": "90 (all majors)",
+    "Instruction Language": "English",
+    "Link": "https://www.ontariouniversitiesinfo.ca/programs/5"
+  },
+  {
+    "University": "University of Waterloo",
+    "Degree": "Bachelor of Architectural Studies, BAS",
+    "OUAC Program Code": "WR",
+    "Grade Range": "Mid-80s",
+    "Experiential Learning": "Co-op program",
+    "Enrollment": "75",
+    "Instruction Language": "English",
+    "Link": "https://www.ontariouniversitiesinfo.ca/programs/321"
+  },
+  {
+    "University": "York University",
+    "Degree": "Bachelor of Environmental Studies, BES",
+    "OUAC Program Code": "YHV",
+    "Grade Range": "Mid to high 70s",
+    "Experiential Learning": "Practicum or internship option available",
+    "Enrollment": "40",
+    "Instruction Language": "English",
+    "Notes": "This program is supported by the CITY Institute at York University, a leading interdisciplinary centre that facilitates critical and collaborative research and provides new knowledge and innovative approaches to understanding and addressing the complexity of the urban arena.",
+    "Link": "https://www.ontariouniversitiesinfo.ca/programs/7805"
+  },
+  {
+    "University": "York University",
+    "Degree": "Bachelor of Environmental Studies/Bachelor of Education, BES/BEd",
+    "OUAC Program Code": "YET",
+    "Grade Range": "High 70s to mid-80s",
+    "Experiential Learning": "Class-based experiential education",
+    "Enrollment": "Open",
+    "Instruction Language": "English",
+    "Link": "https://www.ontariouniversitiesinfo.ca/programs/4925"
+  },
+  {
+    "University": "York University",
+    "Degree": "Bachelor of Arts/Bachelor of Education, BA/BEd",
+    "OUAC Program Code": "YFK",
+    "Grade Range": "High 70s to mid-80s",
+    "Experiential Learning": "Class-based experiential education",
+    "Enrollment": "Open",
+    "Instruction Language": "English",
+    "Link": "https://www.ontariouniversitiesinfo.ca/programs/4924"
+  },
+  {
+    "University": "Carleton University",
+    "Degree": "Bachelor of Engineering, BEng",
+    "OUAC Program Code": "CEX",
+    "Grade Range": "75\u201385% (regular and co-op)",
+    "Experiential Learning": "Co-op option available with this program",
+    "Enrollment": "1,100 (total for Engineering programs)",
+    "Instruction Language": "English",
+    "Link": "https://www.ontariouniversitiesinfo.ca/programs/4017"
+  },
+  {
+    "University": "Lakehead University",
+    "Degree": "Bachelor of Engineering, BEng Bachelor of Engineering/Master of Business Administration, BEng/MBA",
+    "OUAC Program Code": "AM",
+    "Grade Range": "70%",
+    "Experiential Learning": "Co-op or internship option available",
+    "Enrollment": "Open Enrollment",
+    "Instruction Language": "English",
+    "Link": "https://www.ontariouniversitiesinfo.ca/programs/7341"
+  },
+  {
+    "University": "OCAD University",
+    "Degree": "Bachelor of Design, BDes",
+    "OUAC Program Code": "HED",
+    "Grade Range": "N/A",
+    "Experiential Learning": "Practicum or internship option available",
+    "Enrollment": "1,100 (total first year enrollment in all programs)",
+    "Instruction Language": "English",
+    "Notes": "A specialization in Interior Design is available through the Environmental Design program.",
+    "Link": "https://www.ontariouniversitiesinfo.ca/programs/6466"
+  },
+  {
+    "University": "Lakehead University",
+    "Degree": "Bachelor of Arts, BA Bachelor of Arts and Sciences, BASc Bachelor of Engineering Science, BESc Bachelor of Environmental Studies, BES",
+    "OUAC Program Code": "AU",
+    "Grade Range": "70%",
+    "Experiential Learning": "Not Available",
+    "Enrollment": "Open Enrollment",
+    "Instruction Language": "English",
+    "Link": "https://www.ontariouniversitiesinfo.ca/programs/7349"
+  }
+]
