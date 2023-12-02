@@ -1,11 +1,13 @@
 # Web scraper to find data on Ontario post secondary institutions
+
+# Python modules
 from bs4 import BeautifulSoup
 import requests 
 import json
 import re
 # import pandas as pd
 
-urls = ["https://www.ontariouniversitiesinfo.ca/programs/search?advanced=1&a_category=architectur"]
+urls = ["https://www.ontariouniversitiesinfo.ca/programs/search?advanced=1&a_category=ag-res-mgmt-vet-sciences"]
 
 def get_program_links(url):
     # Just an example: there are many other programs in this website
@@ -47,6 +49,7 @@ def get_program_summary(program_link):
 
     program_summary = dict(zip(program_summary_titles, program_summary_details))
     program_summary["Link"] = program_link
+    program_summary["Title"] = soup.find("h1", class_="template-heading").text
 
     return program_summary
 
