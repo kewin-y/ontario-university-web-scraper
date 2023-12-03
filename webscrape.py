@@ -5,9 +5,11 @@ from bs4 import BeautifulSoup
 import requests 
 import json
 import re
+import codecs
 # import pandas as pd
 
-urls = ["https://www.ontariouniversitiesinfo.ca/programs/search?advanced=1&a_category=ag-res-mgmt-vet-sciences"]
+urls = ["a", "b", "c", "d-e", "f-g", "h", "i", "j-l", "m", "n-p", "q-s", "t-z"]
+portal = "https://www.ontariouniversitiesinfo.ca/programs/search/?search=&group="
 
 def get_program_links(url):
     # Just an example: there are many other programs in this website
@@ -41,24 +43,30 @@ def get_program_summary(program_link):
 
     # Clean up tabs and newlines 
     # Replace all tabs and newlines w/ spaces, remove trailing and leading whitespaces
-    program_summary_details = [re.sub(r'\s+', ' ', text).rstrip().lstrip() for text in psd]
+    program_summary_details = [re.sub(r'\s+', ' ', text).rstrip().lstrip().encode("unicode-escape") for text in psd]
 
     # Remove tabs and newlines for the titles
-    # MIGHT be unnecessary
     program_summary_titles = [text.replace("\t","").replace("\n","") for text in pst]
 
+    # Add to dictionary
     program_summary = dict(zip(program_summary_titles, program_summary_details))
-    program_summary["Link"] = program_link
-    program_summary["Title"] = soup.find("h1", class_="template-heading").text
+
+    # 💀
+    program_requirements_div = soup.find(string=re.compile("Prerequisites")).parent.parent
+
+    program_requirements = [re.sub(r'\s+', ' ', text).rstrip().lstrip().encode("unicode-escape") for text in ([req.text for req in program_requirements_div.find_all("li")])]
+
+    program_summary = {"Name" : soup.find("h1", class_="template-heading").text, **program_summary}
+    program_summary["Prerequisites"] = program_requirements
+    program_summary["Link"] = soup.find(class_="program-apply").get("href")
 
     return program_summary
-
 
 if __name__ == "__main__":
     pl = []
 
     for url in urls:
-        pl += get_program_links(url)
+        pl += get_program_links(portal + url)
     
     program_links = ["https://www.ontariouniversitiesinfo.ca" + end_url for end_url in pl]
 
