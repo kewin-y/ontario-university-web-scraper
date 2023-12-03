@@ -43,20 +43,23 @@ def get_program_summary(program_link):
 
     # Clean up tabs and newlines 
     # Replace all tabs and newlines w/ spaces, remove trailing and leading whitespaces
-    program_summary_details = [re.sub(r'\s+', ' ', text).rstrip().lstrip().encode("unicode-escape") for text in psd]
+    program_summary_details = [re.sub(r'\s+', ' ', text).rstrip().lstrip() for text in psd]
 
     # Remove tabs and newlines for the titles
     program_summary_titles = [text.replace("\t","").replace("\n","") for text in pst]
 
     # Add to dictionary
     program_summary = dict(zip(program_summary_titles, program_summary_details))
+    program_summary = {"Name" : soup.find("h1", class_="template-heading").text, **program_summary}
+
+    # for detail_title in program_summary:
+    #     program_summary[detail_title] = "Bruh"
 
     # 💀
     program_requirements_div = soup.find(string=re.compile("Prerequisites")).parent.parent
 
-    program_requirements = [re.sub(r'\s+', ' ', text).rstrip().lstrip().encode("unicode-escape") for text in ([req.text for req in program_requirements_div.find_all("li")])]
+    program_requirements = [re.sub(r'\s+', ' ', text).rstrip().lstrip() for text in ([req.text for req in program_requirements_div.find_all("li")])]
 
-    program_summary = {"Name" : soup.find("h1", class_="template-heading").text, **program_summary}
     program_summary["Prerequisites"] = program_requirements
     program_summary["Link"] = soup.find(class_="program-apply").get("href")
 
@@ -77,7 +80,7 @@ if __name__ == "__main__":
 
     print(len(programs))
 
-    program_json = json.dumps(programs, indent = 2)
+    program_json = json.dumps(programs, indent = 2, ensure_ascii=False)
 
     with open("programs.json", "w") as f:
         f.write(program_json)
